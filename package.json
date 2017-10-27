@@ -1,10 +1,33 @@
 {
   "name": "ng-electron",
   "version": "0.0.1",
-  "main": "index.js",
+  "main": "out-tsc/main.js",
   "repository": "https://github.com/WilliamChelman/ng-electron.git",
   "author": "William Chelman <william.chelman@gmail.com>",
   "license": "MIT",
   "private": true,
-  "workspaces": ["packages/*"]
+  "scripts": {
+    "start": "npm-run-all -p start:electron start:angular",
+    "start:electron": "cd ./packages/app-main && npm run start",
+    "start:angular": "cd ./packages/app-renderer && npm run start",
+    "start:build": "npm-run-all build:angular start:build:electron",
+    "build:angular": "cd ./packages/app-renderer && npm run build",
+    "start:build:electron": "cd ./packages/app-main && npm run start:build"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^4.3.0",
+    "npm-run-all": "^4.1.1",
+    "prettier": "^1.7.4"
+  },
+  "lint-staged": {
+    "*.{ts,json,css,scss}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
 }
