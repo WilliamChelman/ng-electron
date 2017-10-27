@@ -1,0 +1,10 @@
+{
+  "name": "ng-electron",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/WilliamChelman/ng-electron.git",
+  "author": "William Chelman <william.chelman@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": ["packages/*"]
+}
