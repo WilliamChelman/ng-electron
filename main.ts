@@ -14,7 +14,7 @@ app.on("ready", function() {
   // Specify entry point
   if (process.env.PACKAGE === "true") {
     // one "../" too much because generated .js file is in folder out-tsc/
-    const pathname = path.join(__dirname, "../../app-renderer/dist/index.html");
+    const pathname = path.join(__dirname, "packages/app-renderer/dist/index.html");
     win.loadURL(
       url.format({
         pathname,
