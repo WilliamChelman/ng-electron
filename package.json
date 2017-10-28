@@ -20,7 +20,6 @@
     "packages/*"
   ],
   "devDependencies": {
-    "copy": "^0.3.1",
     "copyfiles": "^1.2.0",
     "cross-env": "^5.1.1",
     "husky": "^0.14.3",
