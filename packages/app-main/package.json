@@ -1,6 +1,32 @@
 {
   "name": "app-main",
   "version": "0.0.1",
-  "main": "index.ts",
-  "license": "MIT"
+  "main": "main.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "npm run compile && electron .",
+    "compile": "tsc -p ./tsconfig.json",
+    "pack": "npm run compile && electron-builder --dir",
+    "dist": "npm run compile && electron-builder"
+  },
+  "build": {
+    "extraFiles": [
+      {
+        "from": "production.env",
+        "to": ".env"
+      }
+    ],
+    "win": {}
+  },
+  "dependencies": {
+    "dotenv": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^4.0.2",
+    "electron": "1.7.9",
+    "electron-builder": "^19.42.2",
+    "electron-reload": "^1.2.2",
+    "npm-run-all": "^4.1.1",
+    "typescript": "~2.3.4"
+  }
 }

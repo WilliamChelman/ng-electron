@@ -59,7 +59,3 @@ typings/
 
 # IDE
 .idea/
-
-# generated .js
-**/*.js
-**/*.js.map

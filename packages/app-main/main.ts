@@ -5,21 +5,19 @@ import * as path from "path";
 
 dotenv.config();
 
-let win = null;
+let win: BrowserWindow = null;
 
-app.on("ready", function() {
+app.on("ready", () => {
   // Initialize the window to our specified dimensions
   win = new BrowserWindow({ width: 1000, height: 600 });
 
   // Specify entry point
   if (process.env.PACKAGE === "true") {
-    // one "../" too much because generated .js file is in folder out-tsc/
-    const pathname = path.join(__dirname, "packages/app-renderer/dist/index.html");
     win.loadURL(
       url.format({
-        pathname,
+        pathname: path.join(__dirname, "www/index.html"),
         protocol: "file:",
-        slashes: true
+        slashes: false
       })
     );
   } else {
@@ -29,12 +27,12 @@ app.on("ready", function() {
   }
 
   // Remove window once app is closed
-  win.on("closed", function() {
+  win.on("closed", () => {
     win = null;
   });
 });
 
-app.on("window-all-closed", function() {
+app.on("window-all-closed", () => {
   if (process.platform !== "darwin") {
     app.quit();
   }

@@ -40,7 +40,3 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
-
-# keeping some .js files
-!karma.conf.js
-!protractor.conf.js

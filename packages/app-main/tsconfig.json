@@ -1,6 +1,7 @@
 {
   "extends": "../../tsconfig.json",
+  "files": ["main.ts"],
   "compilerOptions": {
-    "outDir": "out-tsc"
+    "types": ["electron", "dotenv"]
   }
 }
