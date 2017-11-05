@@ -15,7 +15,7 @@
     "build:angular": "yarn workspace app-renderer build",
     "build:common": "yarn workspace app-common build",
     "build:electron": "yarn workspace app-main build",
-    "pack": "yarn run build && pack:electron",
+    "pack": "yarn run build && yarn run pack:electron",
     "pack:electron": "cd ./packages/app-main && yarn run pack",
     "copy-renderer-dist": "copyfiles packages/app-renderer/dist/**/* packages/app-main/www/ -u 3"
   },

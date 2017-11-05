@@ -19,8 +19,8 @@
     "win": {}
   },
   "dependencies": {
-    "dotenv": "^4.0.0",
-    "app-common": "*"
+    "app-common": "*",
+    "dotenv": "^4.0.0"
   },
   "devDependencies": {
     "@types/dotenv": "^4.0.2",
@@ -28,6 +28,6 @@
     "electron-builder": "^19.42.2",
     "electron-reload": "^1.2.2",
     "npm-run-all": "^4.1.1",
-    "typescript": "~2.3.4"
+    "typescript": "~2.4.2"
   }
 }

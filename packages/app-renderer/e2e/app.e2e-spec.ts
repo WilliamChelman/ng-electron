@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('ng-electron-renderer App', () => {
+describe('app-renderer App', () => {
   let page: AppPage;
 
   beforeEach(() => {
