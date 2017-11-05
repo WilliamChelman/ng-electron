@@ -8,12 +8,15 @@
   "private": true,
   "scripts": {
     "start": "npm-run-all -p start:electron start:angular",
-    "start:electron": "cd ./packages/app-main && npm run start",
-    "start:angular": "cd ./packages/app-renderer && npm run start",
+    "start:electron": "yarn workspace app-main start",
+    "start:angular": "yarn workspace app-renderer start",
     "start:build": "cross-env PACKAGE=true npm-run-all build:angular copy-renderer-dist start:electron",
-    "build": "npm-run-all build:angular copy-renderer-dist build:electron",
-    "build:angular": "cd ./packages/app-renderer && npm run build",
-    "build:electron": "cd ./packages/app-main && npm run dist",
+    "build": "npm-run-all build:common build:angular copy-renderer-dist build:electron",
+    "build:angular": "yarn workspace app-renderer build",
+    "build:common": "yarn workspace app-common build",
+    "build:electron": "yarn workspace app-main build",
+    "pack": "yarn run build && pack:electron",
+    "pack:electron": "cd ./packages/app-main && yarn run pack",
     "copy-renderer-dist": "copyfiles packages/app-renderer/dist/**/* packages/app-main/www/ -u 3"
   },
   "workspaces": [

@@ -2,12 +2,14 @@ import * as dotenv from "dotenv";
 import { app, BrowserWindow } from "electron";
 import * as url from "url";
 import * as path from "path";
-
+import {MyClass} from "app-common";
 dotenv.config();
 
 let win: BrowserWindow = null;
 
 app.on("ready", () => {
+    console.log("Imported ", MyClass);
+    console.log("Instance ", new MyClass());
   // Initialize the window to our specified dimensions
   win = new BrowserWindow({ width: 1000, height: 600 });
 

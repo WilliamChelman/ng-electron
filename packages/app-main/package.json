@@ -4,10 +4,10 @@
   "main": "main.js",
   "license": "MIT",
   "scripts": {
-    "start": "npm run compile && electron .",
-    "compile": "tsc -p ./tsconfig.json",
-    "pack": "npm run compile && electron-builder --dir",
-    "dist": "npm run compile && electron-builder"
+    "start": "yarn run build && electron .",
+    "build": "tsc -p ./tsconfig.json",
+    "pack": "yarn run build && electron-builder --dir",
+    "dist": "yarn run build && electron-builder"
   },
   "build": {
     "extraFiles": [
@@ -19,7 +19,8 @@
     "win": {}
   },
   "dependencies": {
-    "dotenv": "^4.0.0"
+    "dotenv": "^4.0.0",
+    "app-common": "*"
   },
   "devDependencies": {
     "@types/dotenv": "^4.0.2",
