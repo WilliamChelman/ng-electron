@@ -7,7 +7,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "npm-run-all -p start:electron start:angular",
+    "start": "npm-run-all -p start:common start:electron start:angular",
+    "start:common": "yarn workspace app-common start",
     "start:electron": "yarn workspace app-main start",
     "start:angular": "yarn workspace app-renderer start",
     "start:build": "cross-env PACKAGE=true npm-run-all build:angular copy-renderer-dist start:electron",
@@ -28,7 +29,8 @@
     "husky": "^0.14.3",
     "lint-staged": "^4.3.0",
     "npm-run-all": "^4.1.1",
-    "prettier": "^1.7.4"
+    "prettier": "^1.7.4",
+    "typescript": "2.4.2"
   },
   "lint-staged": {
     "*.{ts,json,css,scss}": [

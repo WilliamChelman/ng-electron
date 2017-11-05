@@ -4,8 +4,10 @@
   "main": "main.js",
   "license": "MIT",
   "scripts": {
-    "start": "yarn run build && electron .",
+    "start": "yarn run build && npm-run-all -p electron watch",
+    "electron": "electron .",
     "build": "tsc -p ./tsconfig.json",
+    "watch": "tsc -p ./tsconfig.json -w",
     "pack": "yarn run build && electron-builder --dir",
     "dist": "yarn run build && electron-builder"
   },
@@ -28,6 +30,6 @@
     "electron-builder": "^19.42.2",
     "electron-reload": "^1.2.2",
     "npm-run-all": "^4.1.1",
-    "typescript": "~2.4.2"
+    "typescript": "*"
   }
 }

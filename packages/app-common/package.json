@@ -3,10 +3,11 @@
   "version": "0.0.1",
   "main": "index.js",
   "scripts": {
+    "start": "tsc -p ./tsconfig.json -w",
     "build": "tsc -p ./tsconfig.json"
   },
   "license": "MIT",
   "devDependencies": {
-    "typescript": "~2.4.2"
+    "typescript": "*"
   }
 }
