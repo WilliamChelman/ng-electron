@@ -1,0 +1,7 @@
+# output
+dist/
+www/
+
+# generated .js
+**/*.js
+**/*.js.map
