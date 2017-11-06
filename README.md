@@ -18,3 +18,4 @@ Everything worked smoothly after generating the app-renderer package with @angul
 
 ## Known issues
 * Watch is not working for the app-main package
+* Investigate use of Lerna to simplify npm scripts and lifecycle
