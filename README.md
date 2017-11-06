@@ -9,7 +9,7 @@ Just git clone this project
 You will need Yarn as this seed heavily rest on Yarn's workspaces.
 
 ## Adaptations to the Angular app
-Everything worked smoothly after generating the app-renderer package but some adaptation needs to be done
+Everything worked smoothly after generating the app-renderer package with @angular/cli 1.5.0 but some adaptation needs to be done
 * Adding `--base-href .` to the build script. Fix issue with relative path int the Angular app
 * Using `--aot` with `ng serve`. Without AoT, there seem to be some issue with interaction between Angular and the bundled Chromium of Electron.
 * Adding `Window` type definition in `packages/app-renderer/src/typings.d.ts` so that we can use `const remote = window.require("electron")`
