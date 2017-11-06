@@ -1,6 +1,6 @@
 {
   "name": "app-renderer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -45,6 +45,6 @@
     "protractor": "~5.1.2",
     "ts-node": "~3.2.0",
     "tslint": "~5.7.0",
-    "typescript": "*"
+    "typescript": "~2.4.2"
   }
 }

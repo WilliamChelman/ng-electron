@@ -1,6 +1,6 @@
 {
   "name": "app-common",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.js",
   "scripts": {
     "start": "tsc -p ./tsconfig.json -w",
@@ -8,6 +8,6 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "typescript": "*"
+    "typescript": "~2.4.2"
   }
 }
