@@ -17,7 +17,7 @@ app.on("ready", () => {
   if (process.env.PACKAGE === "true") {
     win.loadURL(
       url.format({
-        pathname: path.join(__dirname, "www/index.html"),
+        pathname: path.join(__dirname, "../www/index.html"),
         protocol: "file:",
         slashes: false
       })
