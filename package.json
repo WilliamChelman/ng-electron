@@ -1,6 +1,6 @@
 {
   "name": "ng-electron",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "main.js",
   "repository": "https://github.com/WilliamChelman/ng-electron.git",
   "author": "William Chelman <william.chelman@gmail.com>",
