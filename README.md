@@ -17,5 +17,6 @@ Everything worked smoothly after generating the app-renderer package with @angul
 * For consistency across the different packages, a parent `tsconfig.json` file is used at the root of the app which is extended in every packages.
 
 ## Known issues
-* Watch is not working for the app-main package
-* Investigate use of Lerna to simplify npm scripts and lifecycle
+* Watch is not working for the app-main package.
+* Investigate use of Lerna to simplify npm scripts and lifecycle.
+* Adding dependencies in `app-common` results in build error for electron.
