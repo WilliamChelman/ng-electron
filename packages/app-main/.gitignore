@@ -1,7 +1,4 @@
 # output
 dist/
+dist-electron/
 www/
-
-# generated .js
-**/*.js
-**/*.js.map

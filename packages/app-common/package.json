@@ -1,13 +1,14 @@
 {
   "name": "app-common",
   "version": "0.0.2",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "start": "tsc -p ./tsconfig.json -w",
+    "start": "yarn run build -- -w",
     "build": "tsc -p ./tsconfig.json"
   },
   "license": "MIT",
   "devDependencies": {
     "typescript": "~2.4.2"
-  }
+  },
+  "dependencies": {}
 }
