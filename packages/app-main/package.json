@@ -1,17 +1,20 @@
 {
   "name": "app-main",
   "version": "0.0.2",
-  "main": "main.js",
+  "main": "dist/main.js",
   "license": "MIT",
   "scripts": {
     "start": "yarn run build && npm-run-all -p electron watch",
     "electron": "electron .",
     "build": "tsc -p ./tsconfig.json",
-    "watch": "tsc -p ./tsconfig.json -w",
-    "pack": "yarn run build && electron-builder --dir",
+    "watch": "yarn run build -- -w",
+    "pack": "yarn run dist -- --dir",
     "dist": "yarn run build && electron-builder"
   },
   "build": {
+    "directories": {
+      "output": "dist-electron"
+    },
     "extraFiles": [
       {
         "from": "production.env",
