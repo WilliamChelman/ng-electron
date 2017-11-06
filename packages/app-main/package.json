@@ -30,6 +30,6 @@
     "electron-builder": "^19.42.2",
     "electron-reload": "^1.2.2",
     "npm-run-all": "^4.1.1",
-    "typescript": "*"
+    "typescript": "~2.4.2"
   }
 }
