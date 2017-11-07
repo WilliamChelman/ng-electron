@@ -1,4 +1,6 @@
 # Ng-Electron
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/WilliamChelman/ng-electron.svg)](https://greenkeeper.io/)
 This project aims to be a seed to start a new project using Electron and Angular. 
 It brings a good separation between the different modules by using Yarn workspaces.
 
